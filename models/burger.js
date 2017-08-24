@@ -1,7 +1,5 @@
-var orm = require('../config/orm.js');
-
 module.exports = function(sequelize, DataTypes) {
-  var Post = sequelize.define("Post", {
+  var Burger = sequelize.define("Burger", {
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -9,17 +7,11 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
-    body: {
+    Devoured: {
       type: DataTypes.TEXT,
       allowNull: false,
       len: [1]
     },
-    category: {
-      type: DataTypes.STRING,
-      defaultValue: "Personal"
-    }
   });
-  return Post;
+  return Burger;
 };
-
-module.exports = burger;
